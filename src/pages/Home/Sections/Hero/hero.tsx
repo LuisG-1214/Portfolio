@@ -8,7 +8,6 @@ import { AnimatedBackground } from "../../../../components/AnimatedBackground/An
 import { motion} from "framer-motion";
 
 
-
 const Hero = () => {
     
     const StyledHero = styled("div") (({theme}) => ({
