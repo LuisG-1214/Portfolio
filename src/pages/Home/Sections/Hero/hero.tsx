@@ -8,6 +8,7 @@ import { AnimatedBackground } from "../../../../components/AnimatedBackground/An
 import { motion} from "framer-motion";
 
 
+
 const Hero = () => {
     
     const StyledHero = styled("div") (({theme}) => ({
@@ -17,7 +18,6 @@ const Hero = () => {
         alignItems: "center",
         [theme.breakpoints.up('xs')]: {
             paddingTop: "120px",
-            
         },
         [theme.breakpoints.up('md')]: {
             paddingTop: "0",
@@ -69,7 +69,17 @@ const Hero = () => {
 
                     <Grid size={{xs:12 , md:7}}>
 
-                        <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}> Luis Gustavo 
+                        <Typography 
+                        sx={{ 
+                            fontSize: {xs: "2.5rem", sm: "2rem", md: "4rem"},
+                            pt: {xs: 2, sm: 4, md: 8},
+                        }}
+                        color="primary.contrastText" 
+                        variant="h1" 
+                        textAlign="center" 
+                        pb={2}
+                        > 
+                            Luis Gustavo 
                         </Typography>
 
                         <motion.div
@@ -86,7 +96,11 @@ const Hero = () => {
                         >
                                 {text.split("").map((char, index) => (
                                     <motion.span key={index} variants={letterVariants} style={{ display: 'inline-block'}}>
-                                        <Typography color="primary.contrastText" variant="h3">
+                                        <Typography
+                                        sx={{ fontSize: {xs: "1.5rem", sm: "2rem", md: "2.5rem"}}} 
+                                        color="primary.contrastText" 
+                                        variant="h3"
+                                        >
                                             {char === " " ? "\u00A0" : char} {/* Adiciona espaço para caracteres vazios */}
                                         </Typography>
                                     </motion.span>
