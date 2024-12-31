@@ -19,7 +19,7 @@ const About = () => {
 
     return (
       <>
-        <Box sx={{ py: 8, backgroundColor: "primary.main.contrast" }}>
+        <Box sx={{ py: 6, backgroundColor: "primary.main.contrast" }}>
             <Container maxWidth="lg">
               <Typography 
               variant="h3" 
