@@ -5,7 +5,7 @@ import Projects from "./Sections/Projects/projects"
 import Footer from "../../components/Footer/Footer"
 
 const Home = () => {
-    return (
+    return ( 
       <div>
         <NavBar />
         <Hero />
