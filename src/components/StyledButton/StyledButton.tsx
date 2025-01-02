@@ -4,9 +4,10 @@ import { ReactNode } from "react"
 interface StyledButtonProps {
     children: ReactNode
     onClick: () => void
+    customColor?: string
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
+const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick, customColor }) => {
 
     const StyledButton = styled("button")(({ theme }) => ({
         backgroundColor: "transparent",
@@ -14,7 +15,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
         borderRadius: "3px",
         padding: "5px 15px",
         width: "100%",
-        color: theme.palette.primary.contrastText,
+        color: customColor || theme.palette.primary.contrastText,
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",

@@ -28,7 +28,7 @@ const About = () => {
               gutterBottom 
               fontFamily="montserrat"
               >
-                About Me
+                Sobre
               </Typography>
 
               <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, justifyContent: "center", gap: 4, my: 4 }}>
@@ -53,21 +53,21 @@ const About = () => {
                       display="flex" 
                       justifyContent="center"
                     >
-                      Experience
+                      Experiencia
                     </Typography>
                     
                     <Typography 
                       display="flex" 
                       justifyContent="center"
                     >
-                      1+ Year 
+                      1+ Ano
                     </Typography>
                     
                     <Typography 
                       display="flex" 
                       justifyContent="center" 
                     >
-                      Front-End Developer
+                      Desenvolvimento Web
                     </Typography>
                   </Box>
                 </motion.div>
@@ -93,14 +93,14 @@ const About = () => {
                       display="flex" 
                       justifyContent="center"
                     >
-                      Education
+                      Educação
                     </Typography>
                     
                     <Typography 
                       display="flex" 
                       justifyContent="center"
                     >
-                      Graduate 
+                      Graduação
                     </Typography>
                     
                     <Typography 
@@ -108,19 +108,19 @@ const About = () => {
                       justifyContent="center" 
                       mx={2}
                     >
-                      Systems Analysis
+                      Análise de sistemas
                     </Typography>
                   </Box>
                 </motion.div>
               </Box>
 
-              <Box textAlign="center" my={4}>
+              <Box textAlign="justify" my={4}>
                 <Typography 
                   variant="body1" 
                   color="primary.main" 
                   fontFamily="montserrat"
                 >
-                  Front-end developer passionate about creating intuitive, visually appealing interfaces. Constantly seeking new technologies. I aim to apply my knowledge to projects that prioritize user experience.
+                  Desenvolvedor front-end com experiência em criação de interfaces intuitivas e visualmente atraentes. Possuo conhecimento em desenvolvimento web com JavaScript e frameworks, e linguagem python. Busco constantemente aprimorar minhas habilidades e aplicar as mais recentes tecnologias para garantir uma experiência de usuário excepcional.
                 </Typography>
 
                 <Box

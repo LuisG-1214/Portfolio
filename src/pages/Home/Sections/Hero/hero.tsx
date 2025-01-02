@@ -33,7 +33,7 @@ const Hero = () => {
         },
     }))
 
-    const text = "Front-End Developer";
+    const text = "Desenvolvedor Front-End";
 
     const containerVariants = {
         hidden: { opacity: 1 },
@@ -115,10 +115,10 @@ const Hero = () => {
                                     </StyledButton>
                             </Grid>
                             <Grid size={{xs:12 , md:4}} display="flex" justifyContent="center">    
-                                    <StyledButton onClick={() => window.open("https://google.com")}>
+                                    <StyledButton onClick={() => window.open("https://linktr.ee/LuisGustavoAlves1214")}>
                                         <AlternateEmailIcon />
                                         <Typography>
-                                            Contact me
+                                            Contatos
                                         </Typography>
                                     </StyledButton>
                             </Grid>    
