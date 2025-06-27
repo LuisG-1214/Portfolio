@@ -1,10 +1,9 @@
-import Home from "./pages/Home/home"
 
-const App = () => {
+import AppRouter from "../src/router";
+
+function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <AppRouter />
   )
 }
 

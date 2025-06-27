@@ -8,7 +8,7 @@ const About = () => {
     const divVariants = {
       hidden: (direction: string) => ({
         opacity: 0,
-        x: direction === "left" ? "-100%" : "100%",
+        x: direction === "left" ? "-50%" : "100%",
       }),
       visible: {
         opacity: 1,

@@ -3,12 +3,19 @@ import Grid from "@mui/material/Grid2";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import StyledButton from "../StyledButton/StyledButton";
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import DownloadIcon from '@mui/icons-material/Download';
+import SchoolIcon from '@mui/icons-material/School';
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
 
+    const year = (): number => {
+        return new Date().getFullYear();
+    }
+
+    const navigate = useNavigate();
+
     const StyledFooter = styled("div") (({theme}) => ({
-        backgroundColor: theme.palette.primary.contrastText,
+        //backgroundColor: theme.palette.primary.main,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -20,38 +27,39 @@ const Footer = () => {
 
     return (
       <>
-        <StyledFooter>
+        <StyledFooter sx={{background: 'radial-gradient(ellipse at bottom, #000000 0%, #090A0F 100%)',}}>
           <Grid container>
             <Grid size={{xs:12, md:12}}>
                 <Box 
-                    sx={{
+                    sx={{                      
                         display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
                         gap: "10px",
-                        padding: "20px"
+                        padding: "20px",
+                        "@media (max-width: 430px)": {
+                           flexDirection: "column" 
+                        }
                     }}
                 >
                     
-                    <StyledButton onClick={() => window.open("https://linktr.ee/LuisGustavoAlves1214")} customColor="#000">
+                    <StyledButton onClick={() => window.open("https://linktr.ee/LuisGustavoAlves1214")} customColor="#ffffff" customBorder="#000">
                         <AlternateEmailIcon />
                         <Typography>
-                             Contact me
+                             Contatos
                         </Typography>
                     </StyledButton>  
 
-                    <StyledButton onClick={BackToTOP} customColor="#000">
+                    <StyledButton onClick={BackToTOP} customColor="#ffffff" customBorder="#000">
                     <ArrowUpwardIcon />
                         Back to top
                     </StyledButton> 
 
 
-                    <StyledButton onClick={() => window.open("https://Google.com")} customColor="#000">
-                        <DownloadIcon />
+                    <StyledButton onClick={() => navigate("/certificates")} customColor="#ffffff" customBorder="#000">
+                        <SchoolIcon />
                         <Typography>
-                            Download CV
+                             Certificados
                         </Typography>
-                    </StyledButton> 
+                    </StyledButton>
                 </Box>
             </Grid>
 
@@ -64,8 +72,14 @@ const Footer = () => {
                         pb: "20px"
                     }}
                 >
-                    <Typography>
-                    © 2024 Luis Gustavo. All rights reserved.
+                    <Typography
+                        sx={{
+                            color: "#585858",
+                            fontFamily: "'Lato', sans-serif",
+                            textAlign: "center",
+                        }}
+                    >
+                    © {year()} Luis Gustavo. All rights reserved.
                     </Typography>
                 </Box>
             </Grid>

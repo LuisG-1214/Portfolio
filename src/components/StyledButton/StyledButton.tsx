@@ -5,13 +5,14 @@ interface StyledButtonProps {
     children: ReactNode
     onClick: () => void
     customColor?: string
+    customBorder?: string
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick, customColor }) => {
+const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick, customColor, customBorder }) => {
 
     const StyledButton = styled("button")(({ theme }) => ({
         backgroundColor: "transparent",
-        border: `1px solid ${theme.palette.primary.contrastText}`,
+        border:  customBorder || `1px solid ${theme.palette.primary.contrastText}`,
         borderRadius: "3px",
         padding: "5px 15px",
         width: "100%",
@@ -22,7 +23,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick, customCo
         gap: "10px",
         transition: "background-color 0.5s",
         '&:hover': {
-            backgroundColor: theme.palette.secondary.dark,
+            backgroundColor: theme.palette.secondary.main,
             cursor: "pointer"
         }
     }))
@@ -36,5 +37,5 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick, customCo
     )
 }
   
-  export default StyledButton
+export default StyledButton
   

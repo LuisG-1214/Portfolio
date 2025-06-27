@@ -1,14 +1,17 @@
 import {Container, styled, Typography, Box,} from "@mui/material"
 import Grid from "@mui/material/Grid2"
 import Avatar from "../../../../assets/images/FT.jpg"
-import DownloadIcon from '@mui/icons-material/Download'
+import SchoolIcon from '@mui/icons-material/School';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import StyledButton from "../../../../components/StyledButton/StyledButton"
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground.tsx";
 import { motion} from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 
 const Hero = () => {
+
+    const navigate = useNavigate();
     
     const StyledHero = styled("div") (({theme}) => ({
         backgroundColor: theme.palette.primary.main,
@@ -28,9 +31,12 @@ const Hero = () => {
         width: "75%",
         borderRadius: "50%",
         border: `1px solid ${theme.palette.primary.contrastText}`,
-        [theme.breakpoints.down('md')]: {
-            width: "50%", 
+        "@media (max-width: 900px)": {
+             width:"40%"
         },
+        // [theme.breakpoints.down('md')]: {
+        //     width: "50%", 
+        // },
     }))
 
     const text = "Desenvolvedor Front-End";
@@ -70,8 +76,8 @@ const Hero = () => {
 
                         <Typography 
                         sx={{ 
-                            fontSize: {xs: "2.5rem", sm: "2rem", md: "4rem"},
-                            pt: {xs: 2, sm: 4, md: 8},
+                            fontSize: {xs: "2rem", sm: "1.5rem", md: "4rem"},
+                            pt: {xs: 2, sm: 0, md: 8},
                         }}
                         color="primary.contrastText" 
                         variant="h1" 
@@ -96,26 +102,26 @@ const Hero = () => {
                                 {text.split("").map((char, index) => (
                                     <motion.span key={index} variants={letterVariants} style={{ display: 'inline-block'}}>
                                         <Typography
-                                        sx={{ fontSize: {xs: "1.5rem", sm: "2rem", md: "2.5rem"}}} 
+                                        sx={{ fontSize: {xs: "1.5rem", sm: "1.5rem", md: "2.5rem"}}} 
                                         color="primary.contrastText" 
                                         variant="h3"
                                         >
-                                            {char === " " ? "\u00A0" : char} {/* Adiciona espaço para caracteres vazios */}
+                                            {char === " " ? "\u00A0" : char} 
                                         </Typography>
                                     </motion.span>
                                 ))}
                             </motion.div>
                         <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                             <Grid size={{xs:12 , md:4}} display="flex" justifyContent="center">    
-                                    <StyledButton onClick={() => window.open("https://Google.com")}>
-                                        <DownloadIcon />
+                                    <StyledButton onClick={() => navigate("/certificates")} customBorder="#000">
+                                        <SchoolIcon />
                                         <Typography>
-                                            Download CV
+                                            Certificados
                                         </Typography>
                                     </StyledButton>
                             </Grid>
                             <Grid size={{xs:12 , md:4}} display="flex" justifyContent="center">    
-                                    <StyledButton onClick={() => window.open("https://linktr.ee/LuisGustavoAlves1214")}>
+                                    <StyledButton onClick={() => window.open("https://linktr.ee/LuisGustavoAlves1214")} customBorder="#000">
                                         <AlternateEmailIcon />
                                         <Typography>
                                             Contatos
