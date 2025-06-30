@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
   return (
     <>
       <CssBaseline />
-      <Box sx={{ position: 'relative', minHeight: '100vh', background: 'radial-gradient(ellipse at bottom, #000000 0%, #090A0F 100%)', overflow: 'hidden' }}>
+      <Box sx={{ position: 'relative', minHeight: '100vh', background: 'radial-gradient(ellipse at bottom, #000000 0%, #090A0F 100%)', overflow: 'hidden' }} id="projetos">
         <StarLayer size="1px" count={500} animationDuration="15s" />
         <StarLayer size="2px" count={200} animationDuration="20s" />
         <StarLayer size="3px" count={100} animationDuration="25s" />

@@ -5,13 +5,19 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import { Chip } from "@mui/material";
 import { useState } from "react";
+import palletebg from "../../../../assets/Images/palettebg.jpg";
+import capa from "../../../../assets/Images/capa.jpg";
+import petlife1 from "../../../../assets/Images/petlife1.jpg";
+import frete1 from "../../../../assets/Images/frete1.jpg";
+import InLp from "../../../../assets/Images/InLp.png";
+import OneTap from "../../../../assets/Images/OneTap.jpg";
 
 const projects = [
   {
     title: "Palette Creator",
     description:
       "Gerador de paletas de cores com manipulação de DOM, conversões HEX e HSL, e layout SPA responsivo.",
-    image: "../src/assets/images/palettebg.jpg",
+    image: palletebg,
     link: "https://linktr.ee/LuisGustavoAlves1214",
     techs: ["HTML", "CSS", "JavaScript"],
     id: 0,
@@ -20,7 +26,7 @@ const projects = [
     title: "Dev Burguer",
     description:
       "Sistema de cardápio com carrinho, feito com TailwindCSS, JavaScript e Mobile-First.",
-    image: "../src/assets/images/capa.jpg",
+    image: capa,
     link: "https://linktr.ee/LuisGustavoAlves1214",
     techs: ["HTML", "TailwindCSS", "JavaScript"],
     id: 1,
@@ -29,7 +35,7 @@ const projects = [
     title: "PetLife",
     description:
       "Landing page para clínica pet, moderna, responsiva e com elementos dinâmicos.",
-    image: "../src/assets/images/petlife1.jpg",
+    image: petlife1,
     link: "https://linktr.ee/LuisGustavoAlves1214",
     techs: ["HTML", "CSS", "JavaScript"],
     id: 2,
@@ -38,7 +44,7 @@ const projects = [
     title: "Frete Em Movimento",
     description:
       "Site institucional para empresa de transporte, com design responsivo e otimizado.",
-    image: "../src/assets/images/frete1.jpg",
+    image: frete1,
     link: "https://freteemmovimento.com.br/",
     techs: ["HTML", "Tailwind CSS", "JavaScript"],
     id: 3,
@@ -47,7 +53,7 @@ const projects = [
     title: "Inconformados",
     description:
       "LandingPage para grupo de jovens da Igreja Metodista Londrina Sul, com design responsivo e otimizado.",
-    image: "../src/assets/images/InLp.png",
+    image: InLp,
     link: "https://linktr.ee/LuisGustavoAlves1214",
     techs: ["ReactJS", "Material UI", "TypeScript"],
     id: 4,
@@ -56,7 +62,7 @@ const projects = [
     title: "OneTapPromos",
     description:
       "O OneTapPromos é uma ferramenta automática que reúne as melhores promoções de jogos, entregando diretamente no seu e-mail de forma simples, rápida e sem complicações.",
-    image: "../src/assets/images/OneTap.jpg",
+    image: OneTap,
     link: "https://linktr.ee/LuisGustavoAlves1214",
     techs: ["Python", "Selenium", "Pandas"],
     id: 5,
